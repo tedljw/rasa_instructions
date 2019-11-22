@@ -1,0 +1,10 @@
+intents:
+  - greet
+  - HelloWorld
+actions:
+- utter_greet
+- action_hello_world
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"

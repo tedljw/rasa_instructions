@@ -1,0 +1,56 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="基于AIML和WebQA的智能对话模型">
+    <meta name="keywords" content="AIML WebQA 人工智能标记语言 开放域问答">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>聊天demo</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
+</head>
+<body>
+
+<div class="speak_window">
+    <div class="speak_box">
+        <div class="answer">
+            <div class="icon left"><img src="images/ai.png"></div>
+            <div class="answer_text">
+                <p>hello~~~我是小云，很高心为您服务！</p>
+                <i></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="circle left">
+        <a href="https://github.com/littleredhat1997">
+            <img src="images/keyboard.png">
+        </a>
+    </div>
+    <div class="chat_box left">
+        <input type="text" onKeyUp="key_up()" placeholder="说点什么吧~~~"/>
+    </div>
+    <div class="rectangle right">
+        <button onClick="send_message()">发送</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).keydown(function (event) {
+            if (event.keyCode == 13) {
+                send_message();
+            }
+        });
+
+        $('.chat_box input').focus();
+    });
+</script>
+
+</body>
+</html>
